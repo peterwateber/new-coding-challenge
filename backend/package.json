@@ -1,0 +1,50 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@js-joda/core": "^2.0.0",
+    "@koa/cors": "^2.2.3",
+    "api-contract": "file:../api-contract",
+    "axios": "^0.19.2",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-logger": "^3.2.1",
+    "koa-route": "^3.2.0",
+    "koa-router": "^8.0.7",
+    "koa-session": "^5.13.1",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.15",
+    "node-random-name": "^1.0.1",
+    "path": "^0.12.7",
+    "random-country": "^1.0.1",
+    "random-object-generator": "^1.0.2",
+    "tsoa": "^2.5.13",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.2",
+    "prettier": "1.19.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.7.5",
+    "winston": "^3.1.0"
+  },
+  "scripts": {
+    "build": "rm -rf dist && yarn tsoa:gen && tsc",
+    "start-dev": "nodemon --ignore 'src/routes/' --watch 'src/**/*' -e ts,tsx --exec 'yarn tsoa:gen && ts-node src/index.ts'",
+    "tsoa:gen": "yarn tsoa routes"
+  },
+  "author": "Peter",
+  "license": "ISC"
+}

@@ -1,0 +1,13 @@
+.message {
+  background: #fc3158;
+  &:before {
+    background: #fc3158;
+  }
+  &.completed {
+    background: #dedede;
+    color: #b3b3b3;
+    &:before {
+      background: #dedede;
+    }
+  }
+}

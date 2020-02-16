@@ -1,0 +1,36 @@
+// =============================================================================
+// This is the typescript config file meant for the project source
+// =============================================================================
+{
+    "compilerOptions": {
+        /* General settings */
+        "target": "es6",
+        "outDir": "dist",
+        /* Module settings */
+        "module": "commonjs",
+        "moduleResolution": "node",
+        /* Compiler settings */
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "keyofStringsOnly": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "alwaysStrict": true,
+        "strictBindCallApply": true,
+        /* Paths */
+        "lib": [
+            "es2016",
+            "es2017",
+            "es2018",
+            "es2019"
+        ]
+    },
+    "include": [
+        "./src/**/*",
+        "../api-contract"
+    ],
+    "exclude": [
+        "**/node_modules/*"
+    ]
+}
